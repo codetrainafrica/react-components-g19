@@ -1,24 +1,35 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./styles.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar";
 import Button from "./components/Button";
 
-function App() {
-  const heading = <h3>Welcome</h3>;
-
-  let name = "Ama";
-
-  return (
-    <>
-      <h1 id="hdhdh" className="head" style={{}}>
-        Welcome {`${name} is a girl`}
-      </h1>
-      <Button text="Click me" />
-      <Button text="Submit" />
-      <Button text="Go away" />
-      {heading}
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Button title="Click me" goat={[1, 32, 3]} />
+        <Button title="Press me" />
+        <Button title="Touch me" />
+      </div>
+    );
+  }
 }
+
+// class Button extends Component {
+//   render() {
+//     return <button>Click me!</button>;
+//   }
+// }
+
+// function App() {
+//   return <h1>Hello</h1>;
+// }
+
+// const App = () => {
+//   return <h1>Hello</h1>;
+// }
 
 export default App;

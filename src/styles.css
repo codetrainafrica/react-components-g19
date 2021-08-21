@@ -1,7 +1,11 @@
 h1 {
-  color: green;
+  color: rgb(169, 195, 169);
 }
 
 .head {
+  background-color: red;
+}
+
+.waakye {
   background-color: red;
 }

@@ -1,35 +1,53 @@
-import logo from "./logo.svg";
 import "./App.css";
-import "./styles.css";
-import React, { Component } from "react";
-import Navbar from "./components/Navbar";
+import React, { useState } from "react";
 import Button from "./components/Button";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <Button title="Click me" goat={[1, 32, 3]} />
-        <Button title="Press me" />
-        <Button title="Touch me" />
-      </div>
-    );
+function App() {
+  const [number, setNumber] = useState(0);
+  const [name, setName] = useState("Tony");
+
+  function AddOne() {
+    setNumber(number + 1);
   }
+
+  return (
+    <div>
+      <h1>{number}</h1>
+      <h1>{name}</h1>
+      <button onClick={() => AddOne()}>Add 1</button>
+    </div>
+  );
 }
 
-// class Button extends Component {
-//   render() {
-//     return <button>Click me!</button>;
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = { number: 0, name: "Tony" };
 //   }
-// }
 
-// function App() {
-//   return <h1>Hello</h1>;
-// }
+//   // handleLogin = () => {
+//   //   console.log("Login");
+//   // };
 
-// const App = () => {
-//   return <h1>Hello</h1>;
+//   AddOne() {
+//     this.setState({
+//       number: this.state.number + 1,
+//       name: "Kofi" + this.state.number,
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <h1>{this.state.number}</h1>
+//         <h1>{this.state.name}</h1>
+//         <button onClick={() => this.AddOne()}>Add 1</button>
+//         {/* <Button btnTitle="Login" color="red" handleClick={this.handleLogin} />
+//         <Button btnTitle="Click me" color="blue" />
+//         <Button btnTitle="Sign up" color="yellow" /> */}
+//       </div>
+//     );
+//   }
 // }
 
 export default App;

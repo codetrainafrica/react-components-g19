@@ -4,10 +4,13 @@ class Button extends React.Component {
   render() {
     return (
       <button
-        style={{ color: this.props.color }}
-        onClick={this.props.handleClick}
+        style={{
+          padding: 16,
+          backgroundColor: this.props.bColor,
+          borderRadius: 10,
+        }}
       >
-        {this.props.btnTitle}
+        {this.props.buttonText}
       </button>
     );
   }
